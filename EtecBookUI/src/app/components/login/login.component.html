@@ -1,37 +1,33 @@
 <main class="form-signin w-100 m-auto">
-    <form [formGroup]="loginForm">
-        <img class="mb-1" src="../../../assets/img/logo.png" alt="Logo" width="150">
-        <h2 class="h2 mb-2 fw-normal">EtecBook</h2>
-        <h5 class="mn-3 fw-normal">Sua vida escolar, mais conectada</h5>
+  <form [formGroup]="loginForm">
+    <img class="mb-1" src="/assets/img/logo.png" alt="" width="120" height="120">
+    <h2 class="h3 mb-3 fw-normal">EtecBook</h2>
+    <h5 class="mb-3 fw-normal">Sua vida escolar, mais conectada!</h5>
 
-        <div class="form-floating mb-2">
-            <input formControlName="email" type="text" class="form-control" id="email" placeholder="Email"
-                [class.is-invalid]="checkEmail()">
-            <label for="email"><i class='bx bx-user-circle'></i> Email ou Nome de Usuário</label>
-            <span *ngIf="checkEmail()" class="text-danger text-start d-block mt-1">*Campo obrigatório</span>
-        </div>
+    <div class="form-floating mb-2">
+      <input formControlName="email" type="text" class="form-control" id="email" placeholder="Email" [class.is-invalid]="checkEmail()">
+      <label for="email"><i class='bx bx-user'></i> Email ou Nome de Usuário</label>
+      <span *ngIf="checkEmail()" class="text-danger text-start d-block py-1">*Campo Obrigatorio</span>
+    </div>
+    <div class="form-floating">
 
-        <div class="form-floating">
-            <input formControlName="password" type="password" class="form-control" id="password" placeholder="Senha"
-                [class.is-invalid]="checkPassword()">
-            <label for="password"><i class='bx bx-lock-alt'></i> Senha</label>
-            <span *ngIf="checkPassword()" class="text-danger text-start d-block mt-1">*Campo obrigatório</span>
-        </div>
+      <input formControlName="password" type="password" class="form-control" id="password" placeholder="Senha" [class.is-invalid]="checkPassword()">
+      <label for="password"><i class='bx bx-lock-alt' ></i> Senha</label>
+      <span *ngIf="checkPassword()" class="text-danger text-start d-block py-1">*Campo Obrigatorio</span>
+    </div>
 
-        <div class="checkbox my-2 text-start">
-            <label>
-                <input type="checkbox" value="remember-me"> Manter Conectado?
-            </label>
-        </div>
+    <div class="checkbox my-2 text-start">
+      <label>
+        <input type="checkbox" value="remember-me"> Manter Conectado?
+      </label>
+    </div>
+    <button (click)="onSubmit()" class="w-100 btn btn-lg btn-primary mb-2" type="submit">Entrar</button>
 
-        <button (click)="onSubmit()" class="w-100 btn btn-lg btn-primary mb-2" type="submit">Entrar</button>
+    <a class="forgetPass" routerLink="/forget">Esqueceu a senha?</a>
 
-        <a class="forgetPass" routerLink="/forget">Esqueceu a Senha?</a>
-
-        <div class="border-text"></div>
-
-        <a routerLink="/register" class="w-100 btn btn-lg btn-success">Criar Conta</a>
-
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2023</p>
-    </form>
+    <div class="border-text"></div>
+    <a routerLink="/register" class="w-100 btn btn-success">Criar Conta</a>
+    <p class="mt-4 mb-3 text-muted">© 2023</p>
+  </form>
 </main>
+

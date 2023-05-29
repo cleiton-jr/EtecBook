@@ -68,7 +68,7 @@
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
           const theme = toggle.getAttribute('data-bs-theme-value')
-          localStorage.setItem('themeEtecBook', theme)
+          localStorage.setItem('themethemeEtecBook', theme)
           setTheme(theme)
           showActiveTheme(theme, true)
         })
